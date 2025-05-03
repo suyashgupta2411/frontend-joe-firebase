@@ -15,33 +15,6 @@ export const HomePage = () => {
         <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-gray-700 rounded-lg transform rotate-12 opacity-50"></div>
       </div>
 
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
-        <h1 className="text-2xl font-bold text-white">Auth App</h1>
-        <div className="flex space-x-4">
-          <Button
-            variant="link"
-            onClick={() => navigate("/")}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            Home
-          </Button>
-          <Button
-            variant="link"
-            onClick={() => navigate("/login")}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            Login
-          </Button>
-          <Button
-            variant="link"
-            onClick={() => navigate("/register")}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            Register
-          </Button>
-        </div>
-      </nav>
-
       <div className="container mx-auto px-4 py-16 flex-1 flex flex-col justify-center items-center relative z-10">
         <div className="max-w-4xl w-full text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight mb-6">
@@ -101,6 +74,18 @@ export const HomePage = () => {
               </div>
 
               <div className="flex items-start p-5 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all">
+                <UserCheck className="mr-4 text-blue-400 h-6 w-6 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-white mb-1">
+                    User Registration
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Create an account with email and password
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start p-5 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all">
                 <Lock className="mr-4 text-blue-400 h-6 w-6 mt-1" />
                 <div>
                   <h3 className="font-semibold text-white mb-1">
@@ -137,10 +122,6 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-
-      <footer className="text-center py-4 text-gray-500 text-sm relative z-10">
-        © 2025 Auth App. All rights reserved.
-      </footer>
     </div>
   );
 };
